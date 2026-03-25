@@ -34,5 +34,21 @@ Dieses PowerShell-Script überwacht die Ablaufdaten von **Apple Enrollment Progr
 
 Erforderliche Einstellungen:
 
-- **API Permission (Application):**
-  
+- **API Permission (Application):** DeviceManagementServiceConfig.Read.All
+
+- **Admin Consent:** erforderlich
+- Authentifizierung:
+- Client ID
+- Client Secret (Value!)
+
+---
+
+## ⚙️ Verwendung in PRTG
+
+### Sensor-Typ: EXE/Script Advanced
+
+
+### Parameter
+
+```text
+-TenantId "%scriptplaceholder1" -ClientId "%scriptplaceholder2" -ClientSecret "%scriptplaceholder3" -WarningDays 30 -ErrorDays 7
