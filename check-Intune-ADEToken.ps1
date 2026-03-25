@@ -1,24 +1,24 @@
 <#
 .SYNOPSIS
-    Überwacht die Ablaufdaten von Apple Enrollment Program (ADE) Tokens in Microsoft Intune.
+    Ãœberwacht die Ablaufdaten von Apple Enrollment Program (ADE) Tokens in Microsoft Intune.
 
 .DESCRIPTION
-    Dieses Script ruft über die Microsoft Graph API alle vorhandenen ADE Tokens (depOnboardingSettings)
-    ab und ermittelt das früheste Ablaufdatum.
+    Dieses Script ruft Ã¼ber die Microsoft Graph API alle vorhandenen ADE Tokens (depOnboardingSettings)
+    ab und ermittelt das frÃ¼heste Ablaufdatum.
 
-    Die Ergebnisse werden im JSON-Format für einen PRTG EXE/Script Advanced Sensor ausgegeben.
-    Der Sensor überwacht insbesondere:
-        - Tage bis zum frühesten Ablauf
+    Die Ergebnisse werden im JSON-Format fÃ¼r einen PRTG EXE/Script Advanced Sensor ausgegeben.
+    Der Sensor Ã¼berwacht insbesondere:
+        - Tage bis zum frÃ¼hesten Ablauf
         - Anzahl vorhandener Tokens
         - Anzahl kritischer / ablaufender Tokens
 
-    Das Script ist für den Einsatz auf einem PRTG Probe Server vorgesehen.
+    Das Script ist fÃ¼r den Einsatz auf einem PRTG Probe Server vorgesehen.
 
 .AUTHOR
-   Raphael Schlegel
+   RASC79
 
 .COMPANY
-    Bechtle Schweiz AG
+    <Company Name>
 
 .VERSION
     1.0.0
@@ -27,8 +27,8 @@
     2026-03-25
 
 .PURPOSE
-    Frühzeitige Erkennung ablaufender ADE Tokens zur Vermeidung von
-    Enrollment-Problemen bei Apple Geräten (DEP/ADE).
+    FrÃ¼hzeitige Erkennung ablaufender ADE Tokens zur Vermeidung von
+    Enrollment-Problemen bei Apple GerÃ¤ten (DEP/ADE).
 
 .REQUIREMENTS
     - Microsoft Entra App Registration
@@ -47,18 +47,18 @@
     Client Secret (Value) der App Registration
 
 .PARAMETER WarningDays
-    Schwellwert für Warnung (Standard: 30 Tage)
+    Schwellwert fÃ¼r Warnung (Standard: 30 Tage)
 
 .PARAMETER ErrorDays
-    Schwellwert für Fehler (Standard: 7 Tage)
+    Schwellwert fÃ¼r Fehler (Standard: 7 Tage)
 
 .OUTPUT
     JSON im PRTG Advanced Sensor Format
 
 .NOTES
-    - Verwendet Microsoft Graph API (beta Endpoint für depOnboardingSettings)
-    - Änderungen an der Graph API können Anpassungen erforderlich machen
-    - Script ist für automatisierte Ausführung vorgesehen (kein interaktiver Login)
+    - Verwendet Microsoft Graph API (beta Endpoint fÃ¼r depOnboardingSettings)
+    - Ã„nderungen an der Graph API kÃ¶nnen Anpassungen erforderlich machen
+    - Script ist fÃ¼r automatisierte AusfÃ¼hrung vorgesehen (kein interaktiver Login)
 
 .CHANGELOG
     1.0.0 - Initiale Version
